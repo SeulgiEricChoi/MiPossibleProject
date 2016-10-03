@@ -19,7 +19,8 @@ public class MainActivity extends AppCompatActivity {
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainActivity.this, DayActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -27,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse ("http://www.daum.net"));
-                startActivity(myIntent);
+                Intent intent = new Intent(MainActivity.this, MonthActivity.class);
+                startActivity(intent);
             }
         });
     }

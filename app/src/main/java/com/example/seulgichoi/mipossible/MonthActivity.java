@@ -14,22 +14,16 @@ public class MonthActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.month_main);
 
-        Button button1 = (Button) findViewById(R.id.button1);
+        Button button1 = (Button) findViewById(R.id.button3);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
-            }
-        });
-
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse ("http://www.daum.net"));
-                startActivity(myIntent);
+                //Toast.makeText(getApplicationContext(), "Button is clicked", Toast.LENGTH_LONG).show();
+                //Intent intent = new Intent(DayActivity.this, MainActivity.class);
+                //startActivity(intent);
+                finish();
             }
         });
     }
